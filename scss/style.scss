@@ -1,0 +1,113 @@
+$main-font:Inter, sans-serif;
+$opacity-color:rgba(100, 100, 100, 0.5);
+$hover-color:lightgray;
+
+@mixin linkStyle($family, $color, $size, $textDec, $weight){
+    font-family:$family;
+    color:$color;
+    font-size:$size;
+    text-decoration:$textDec;
+    font-weight:$weight;
+}
+body{
+    font-family:$main-font;
+    margin:o;
+    color:white;
+}
+.home-page{
+    background-image:url(../img/bg.png);
+    background-size:cover;
+    background-repeat:no-repeat;
+    height:100vh;
+ 
+}
+header{
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    padding:20px 20px 0 20px;
+    align-items:center;
+}
+.logo{
+    a{
+        @include linkStyle($main-font, white, 20px, none, 900);
+        text-transform:uppercase;
+    }
+}
+nav{
+    .menu{
+        display:flex;
+        justify-content:center;
+        list-style:none;
+        margin-right:100px;
+
+        li{
+            margin-right:80px;
+
+            &:last-child{
+                margin-right:0; 
+            }
+
+            a{
+                @include linkStyle($main-font, white, 18px, none, 400);
+
+                &:hover{
+                    color:$hover-color;
+                }
+            }
+        }    
+    }
+}
+.extra-menu{
+    background-color:$opacity-color;
+    padding:5px;
+    height:40px;
+    border-radius:5px;
+}
+.home-page-main{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    margin-top:130px;
+    padding-left:20px;
+    align-items:center;
+
+    .socials{
+        display:grid;
+        grid-template-rows:50px 50px 50px;
+        row-gap:20px;
+        justify-items:center;
+    }
+}
+.home-page-title{
+    text-align:center;
+    line-height:5px;
+    padding-right:50px;
+
+    h2{
+        text-transform:uppercase;
+        font-weight:600;
+        letter-spacing:20px;
+    }
+
+    h1{
+        font-size:150px;
+        letter-spacing:15px;
+    }
+}
+.home-page-footer{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    padding-left:20px;
+    margin-top:110px;
+
+    .footer-places{
+        display:grid;
+        grid-template-columns:repeat(3, 200px);
+        column-gap:50px;
+        justify-content:center;
+        padding-right:5px;
+    }
+
+    .arrow{
+        align-self:end;
+    }
+}
