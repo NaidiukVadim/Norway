@@ -129,6 +129,20 @@ nav .menu li a:hover {
   padding-right: 5px;
 }
 
+.home-page-footer .footer-place-item {
+  background-color: rgba(100, 100, 100, 0.5);
+  border-radius: 15px;
+  width: auto;
+  height: 70px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr auto;
+      grid-template-columns: 0.5fr auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .home-page-footer .arrow {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
