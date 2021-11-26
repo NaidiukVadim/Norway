@@ -114,6 +114,12 @@ nav{
          display:grid;
          grid-template-columns:0.5fr auto;
          align-items:center;
+         line-height:0.5;
+
+         .plan-link{
+            color:gray;
+            text-decoration:none;
+         }
     }
 
     .arrow{
